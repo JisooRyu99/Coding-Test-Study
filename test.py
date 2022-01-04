@@ -1,13 +1,14 @@
 def solution(s):
     stack=[]
-    for c in s:
-        if len(stack)==0:
-            stack.append(c)
+    for i in s:
+        if not stack:
+            stack.append(i)
             continue
 
-        if stack[-1]!=c:
-            stack.append(c)
-        else: stack.pop()
-    if len(stack)==0:
+        if stack[-1]==i:
+            stack.pop()
+        else: stack.append(i)
+
+    if not stack:
         return 1
-    else : return 0
+    else: return 0    
