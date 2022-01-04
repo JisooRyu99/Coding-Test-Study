@@ -1,2 +1,2 @@
-# programmers Lv.2 짝지어 제거하기
+# programmers 코딩 테스트 문제 풀기
 
