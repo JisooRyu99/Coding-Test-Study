@@ -1,0 +1,8 @@
+깃허브에 소스를 push 했는데 contributions이 업데이트 되지 않는 경우
+
+$git config --global user.name MYNAME
+
+$git config --global user.email MYEMAIL (깃허브 리파지터리의 컨트리뷰터 계정 이메일)
+
+
+
