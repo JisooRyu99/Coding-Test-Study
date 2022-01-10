@@ -4,5 +4,6 @@ $git config --global user.name MYNAME
 
 $git config --global user.email MYEMAIL (깃허브 리파지터리의 컨트리뷰터 계정 이메일)
 
+--> 확인하기
 
 
