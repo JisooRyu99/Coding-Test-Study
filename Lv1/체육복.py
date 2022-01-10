@@ -20,4 +20,4 @@ def solution(n, lost, reserve):
     return n-len(lost_)
 
 # lost_ = [(i) for i in lost for j in reserve if (i-j)==1 ]
-# 다시 해보기
+# 다시 시도해보기
