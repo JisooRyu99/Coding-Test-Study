@@ -1,4 +1,4 @@
-
+# Greedy
 # lost_ = [(i) for i in lost for j in reserve if (i-j)==1 ]
 # 다시 시도해보기
 
