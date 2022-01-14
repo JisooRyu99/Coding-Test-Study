@@ -28,4 +28,4 @@ def solution(progresses, speeds):
 # 3. 그 다음 원소도 계속 loop 
 # 3-1. 이때, cnt>0 이라면 answer에 저장하고 cnt 초기화
 # 3-2. n+=1
-# 4. 마지막 원소가 100 넘어서 loop 빠져나오면 answer에 cnt 저장.
+# 4. 마지막 원소가 100 넘어서 loop 빠져나오면 answer에 cnt 저장
