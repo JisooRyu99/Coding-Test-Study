@@ -48,7 +48,8 @@ def solution(priorities, location):
     answer = 0
     while True:
         cur = queue.pop(0)
-        if any(cur[1] < q[1] for q in queue):       # any : 전달받은 자료형의 element 중 하나라도 True일 경우 True를 돌려준다 (만약 empty 값을 argument로 넘겨주었다면 False를 
+        if any(cur[1] < q[1] for q in queue):       
+            # any : 전달받은 자료형의 element 중 하나라도 True일 경우 True를 돌려준다 (만약 empty 값을 argument로 넘겨주었다면 False를 돌려줌
             queue.append(cur)
         else:
             answer += 1
