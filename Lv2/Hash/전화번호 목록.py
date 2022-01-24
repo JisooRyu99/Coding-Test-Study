@@ -23,3 +23,15 @@ def solution(phone_book):
         if phone_book[i+1].startswith(phone_book[i]):
             return False
     return True
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------
+# 비슷한 정답
+
+def solution(phoneBook):
+    phoneBook = sorted(phoneBook)
+
+    for p1, p2 in zip(phoneBook, phoneBook[1:]):        # zip 을 통해서 [i],[i+1]의 표현을 없앰
+        if p2.startswith(p1):
+            return False
+    return True
