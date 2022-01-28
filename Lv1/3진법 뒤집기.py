@@ -18,12 +18,17 @@ def solution(n):
     return int(s,3)       # 10진법 return 
             
 
-  
+  --------------------------------------------------------------------------
+# 다른 사람의 풀이
 
-
-
-
-
+def solution(n):
+    answer = 0
+    tmp=''
+    while n:
+        tmp+= str(n%3)
+        n=n//3
+        print(tmp)
+    return int(tmp,3)
 
 
 
