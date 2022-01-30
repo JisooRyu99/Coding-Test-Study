@@ -11,3 +11,17 @@ def solution(d, budget):
         answer.append(len(i))
     return max(answer)
 ---------------------------------------------------------------------------------------------------------------
+
+
+def solution(d, budget):
+    answer = 0
+    
+    for i in sorted(d):
+        budget-=i
+        if budget<0:
+            break
+        answer+=1
+    return answer
+
+
+# 조합으로 풀려고 하니 시간 초과가 
