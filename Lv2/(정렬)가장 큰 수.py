@@ -1,5 +1,5 @@
 # 시간 초과
-# permultations으로 푸려고 했으나 시간초과로 실패
+# permutations 풀려고 했으나 시간초과로 실패
 
 from itertools import permutations
 def solution(numbers):
