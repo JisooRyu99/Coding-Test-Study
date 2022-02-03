@@ -4,10 +4,9 @@
 from itertools import permutations
 def solution(numbers):
     answer = []
-    number_list = list(permutations(numbers,len(numbers)))
     
-    for n in number_list:
-        answer.append("".join(map(str,n)))
+    for i in (list(permutations(numbers,len(numbers)))):
+        answer.append("".join(map(str,i)))
     
     return max(answer)
 --------------------------------------------------------------------------
