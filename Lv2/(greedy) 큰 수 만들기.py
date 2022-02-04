@@ -32,3 +32,15 @@ def solution(number, k):
     if k != 0:
         stack = stack[:-k]
     return ''.join(stack)
+
+---------------------------------------------------------------------------------------------------
+
+def solution(number, k):
+    answer = []
+    
+    for num in number:
+        while answer and k >0 and answer[-1] <num:
+            answer.pop()
+            k-=1
+        answer.append(num)
+    return "".join(map(str,answer[:len(number)-k]))    
