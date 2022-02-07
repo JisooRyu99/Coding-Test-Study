@@ -1,3 +1,5 @@
+# 테스트 케이스는 성공했지만 
+
 from itertools import permutations
 def cal(result,sign):
     for i in range(len(result)):
@@ -42,3 +44,31 @@ def solution(ex):
     
     return max(answer)
     
+
+    ------------------------------------------------------------------------------------
+    
+ from itertools import permutations
+
+def cal(n, priority, expression):
+    if n == 2:
+        return str(eval(expression))
+
+    if priority[n] == '*':
+        result = eval('*'.join([cal(n + 1, priority, e) for e in expression.split('*')]))
+    if priority[n] == '+':
+        result = eval('+'.join([cal(n + 1, priority, e) for e in expression.split('+')]))
+    if priority[n] == '-':
+        result = eval('-'.join([cal(n + 1, priority, e) for e in expression.split('-')]))
+
+    return str(result)
+
+
+def solution(expression):
+    answer = []
+    signs=['+','-','*']
+    priorities = permutations(signs,3)      # 연산자 조합
+    for priority in priorities:
+        result = cal(0, priority, expression)
+        
+        answer.append(abs(int(result)))
+    return max(answer)
