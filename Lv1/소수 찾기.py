@@ -22,19 +22,19 @@ def solution(n):
 
 import math
 
-def solution(number):
-    numbers = [True] * (number + 1) 
-    answer = 0
+n = 1000	# 2부터 1000까지 모든 수에 대하여 소수를 찾을 것이다.
+array = [True for i in range(n + 1) # 0,1을 제외한 모든 숫자가 소수(True)인 것으로 설정하고 시작한다.
 
-    for num in range(2,int(math.sqrt(number))+1):   # 2부터 시작해서 특정 수의 배수에 해당하는 수를 모두 지운다 (이때 자기 자신은 지우지 않고, 이미 지운 수는 건너 뜀)
-        if numbers[num] == False:
-            continue;
-
-        for i in range(num+num,number+1,num):
-            numbers[i] = False
-
-    for i in range(2,number+1):
-        if numbers[i] == True:
-            answer+=1
-
-    return answer
+# 에라토스테네스의 체 알고리즘
+for i in range(2, int(math.sqrt(n)) + 1): # 2부터 n의 제곱근까지의 모든 수를 확인
+	if array[i] == True:	# i가 소수인 경우
+    	# i를 제외한 i의 모든 배수를 지우기
+        j = 2
+        while i * j <= n:
+        	array[i * j] = False
+            j += 1
+            
+#모든 소수 출력
+for i range(2, n + 1):
+	if array[i]:
+    	print(i, end = ' ')
