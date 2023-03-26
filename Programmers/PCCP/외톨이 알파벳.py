@@ -16,4 +16,4 @@ def solution(input_string):
                 
     return "".join(sorted(answer)) if answer else 'N'
 
-# 문제  : https://school.programmers.co.kr/learn/courses/15008/lessons/121683?language=python3
+# 문제 : https://school.programmers.co.kr/learn/courses/15008/lessons/121683?language=python3
